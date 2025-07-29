@@ -1,18 +1,18 @@
 ---
-title: "Primer: Information exchange on the internet"
+title: Information exchange on the internet
 teaching: 20
-exercises: 10
+exercises: 0
 questions:
-  - "What exactly is the internet?"
-  - "How is information exchanged on the internet?"
-  - "Why APIs?"
+  - What exactly is the internet?
+  - How is information exchanged on the internet?
+  - Why APIs?
 objectives:
-  - "Understand how information is exchanged on the internet."
+  - Understand how information is exchanged on the internet.
 keypoints:
-  - "The internet is a network of computers (servers) that exchange information with each other."
-  - "Various transport protocols, such as HTTP, dictate how information is transferred between servers."
-  - "Data is returned in various formats by servers, including `json` and `xml`."
-  - "APIs are exposed interfaces which allows us to programatically get data from the server."
+  - The internet is a network of computers (servers) that exchange information with each other.
+  - Various transport protocols, such as HTTP, dictate how information is transferred between servers.
+  - Data is returned in various formats by servers, including `json` and `xml`.
+  - APIs are exposed interfaces which allows us to programatically get data from the server.
 ---
 
 # The internet revolution

@@ -11,6 +11,8 @@ This is the course website for Introductory Python, a workshop that is run by th
 
 To motivate the use of `python`, we will be working with publicly available APIs. Since this course does not assume technical knowledge, a brief primer on how information is exchanged over the internet will be provided at the start of the course.
 
+{:.callout}
+
 > ## Prerequisites
 >
 > In order for you to work through the exercises in this workshop, you will need to have the following
