@@ -1,7 +1,7 @@
 ---
 title: Variables as data containers in programming
 teaching: 30
-exercises: 15
+exercises: 5
 questions:
   - How do we store information in Python?
   - How do we modify data?
@@ -11,6 +11,7 @@ objectives:
 keypoints:
   - Variables are containers used to store data in Python (and all programming languages).
   - We can create, update and destroy variables in Python.
+  - The `=` operator is used for assignment, while the `del` keyword allows us to delete variables created.
 ---
 
 # Learning outcomes
@@ -134,6 +135,8 @@ Outside of these laws (Python will never let you proceed if you break any of the
 > list_of_fruits = ['apple', 'pear'] # ❌ data type should not be provided in the variable name
 > fruits = ['apple', 'pear']
 > ```
+>
+> That said, these are guidelines. Ultimately, one should strive for consistency throughout their code and the existing code base of the organisation. Remember, code is read more often than it is written; your future self will thank you one day (trust me, I have found myself reading my own codes and wondered what on earth is a specific value supposed to be doing!)
 
 {:.challenge}
 
@@ -145,8 +148,69 @@ Outside of these laws (Python will never let you proceed if you break any of the
 > https://api-open.data.gov.sg/v2/real-time/api/pm25?date=2025-01-01
 > ```
 >
-> Assign the URL to a suitably named variable.
+> Assign the URL to a suitably named variable. Consider how else you might improve the readability of your code.
+> **You will need to encapsulate the URL in either single `'` or double `"` quote** (we will come to this very shortly).
+> How else can we improve the readibility of our code?
 
 # Updating variables
 
+One of the most powerful thing about a variable is that we can interact with it throughout the script. Just like a whiteboard where you can erase and write something new, variables in Python aren’t set in stone — you can update them as your program runs. For instance:
+
+```python
+class_size = 10
+print (class_size)
+
+class_size = 20
+print (class_size)
+```
+
+Notice how we have changed the value of `class_size` in the second line; going forward, all references to `class_size` will take on the new value of `20` instead of `10`.
+
+{:.challenge}
+
+> ## Try this
+>
+> Update the query date from 2025-01-01 to today's date in YYYY-MM-DD format.
+
+{: .callout}
+
+> ## Beware of silent updates!
+>
+> Because all variables can be updated via reassignment, it is important to ensure that you do not accidentally overwrite it later on. This is one of the reasons why it is naming variables is so difficult - variables need to be descriptive, short, and also unique - all at the same time. In general, Python does not give any warning when you re-assign a new value to a new variable. Note that I am saying update via **re-assignment**. This is intentional. In the next section, we will talk a bit more about updating variables.
+
 # The death of a variable: Destroying variables
+
+As we write programs, we often create variables to hold information. But just like leaving dirty dishes in the sink, keeping unnecessary variables lying around can clutter our program’s memory.
+
+Thankfully, Python gives us a simple way to clean up after ourselves: the del keyword.
+
+```python
+x = 42
+print(x)   # Output: 42
+
+del x      # delete the variable
+
+print(x)   # ❌ This will raise an error: NameError: name 'x' is not defined
+```
+
+When you call del, you’re telling Python:
+
+> “I don’t need this variable anymore — please forget it!”
+
+This is especially useful in longer programs or when working with large datasets, where freeing up memory can keep your code running smoothly.
+
+💡 Pro tip: You can also delete multiple variables at once:
+
+```python
+a, b, c = 1, 2, 3
+del a, b
+print(c)   # Output: 3
+```
+
+Think of `del` as hitting the “reset” button on variables you no longer need. Just be careful: once deleted, they’re gone for good — unless you recreate them!
+
+{:.error}
+
+> # Errors in Python
+>
+> Errors are raised when you are asking Python to do something it cannot. There are numerous base errors, including `NameError` which we just saw. This error is raised when you tell Python to use a variable that does not exist. We will be diving more into how we can handle errors in Python in the second day.
