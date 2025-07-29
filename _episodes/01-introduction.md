@@ -54,7 +54,7 @@ An HTTP request typically consists of:
 3. **Headers**: Metadata providing additional context, like authentication tokens, content type, or caching instructions.
 4. **Body (optional)**: Data sent to the server, usually with methods like POST or PUT.
 
-{: .callout}
+{:.callout}
 
 > ## HTTP methods
 >
@@ -74,7 +74,7 @@ When the server has processed the query, it will respond with a response with th
 2. **Headers**: Metadata about the response, such as content type or length.
 3. **Body**: The actual content — HTML, JSON, XML, or another format.
 
-{: .callout}
+{:.callout}
 
 > ## HTTP status codes
 >
@@ -101,75 +101,71 @@ An understanding of the HTTP standard is helpful if we want to work with **APIs*
 
 Instead of returning HTML for a human to read, APIs typically return structured data (commonly `JSON` or `XML`) that applications can process. For example, a weather app might send an HTTP GET request to an API endpoint like:
 
-{:.code}
-
-```
+```bash
 https://api-open.data.gov.sg/v2/real-time/api/pm25
 ```
 
 The API then responds with a `JSON` object containing data such as:
 
-{:.code}
-
-```
+```bash
 {
-   "code":0,
-   "data":{
-      "regionMetadata":[
-         {
-            "name":"west",
-            "labelLocation":{
-               "latitude":1.35735,
-               "longitude":103.7
-            }
-         },
-         {
-            "name":"east",
-            "labelLocation":{
-               "latitude":1.35735,
-               "longitude":103.94
-            }
-         },
-         {
-            "name":"central",
-            "labelLocation":{
-               "latitude":1.35735,
-               "longitude":103.82
-            }
-         },
-         {
-            "name":"south",
-            "labelLocation":{
-               "latitude":1.29587,
-               "longitude":103.82
-            }
-         },
-         {
-            "name":"north",
-            "labelLocation":{
-               "latitude":1.41803,
-               "longitude":103.82
-            }
-         }
-      ],
-      "items":[
-         {
-            "date":"2025-07-29",
-            "updatedTimestamp":"2025-07-29T11:15:46+08:00",
-            "timestamp":"2025-07-29T11:00:00+08:00",
-            "readings":{
-               "pm25_one_hourly":{
-                  "west":22,
-                  "east":12,
-                  "central":18,
-                  "south":10,
-                  "north":16
-               }
-            }
-         }
-      ]
-   },
-   "errorMsg":""
+  "code": 0,
+  "data": {
+    "regionMetadata": [
+      {
+        "name": "west",
+        "labelLocation": {
+          "latitude": 1.35735,
+          "longitude": 103.7
+        }
+      },
+      {
+        "name": "east",
+        "labelLocation": {
+          "latitude": 1.35735,
+          "longitude": 103.94
+        }
+      },
+      {
+        "name": "central",
+        "labelLocation": {
+          "latitude": 1.35735,
+          "longitude": 103.82
+        }
+      },
+      {
+        "name": "south",
+        "labelLocation": {
+          "latitude": 1.29587,
+          "longitude": 103.82
+        }
+      },
+      {
+        "name": "north",
+        "labelLocation": {
+          "latitude": 1.41803,
+          "longitude": 103.82
+        }
+      }
+    ],
+    "items": [
+      {
+        "date": "2025-07-29",
+        "updatedTimestamp": "2025-07-29T11:15:46+08:00",
+        "timestamp": "2025-07-29T11:00:00+08:00",
+        "readings": {
+          "pm25_one_hourly": {
+            "west": 22,
+            "east": 12,
+            "central": 18,
+            "south": 10,
+            "north": 16
+          }
+        }
+      }
+    ]
+  },
+  "errorMsg": ""
 }
 ```
 

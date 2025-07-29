@@ -26,7 +26,7 @@ In the codes provided in the notebooks, we will be using `python` to extract 24-
 
 # Setting up your VSCode for working with Jupyter notebooks
 
-{: .checklist}
+{:.checklist}
 
 > ## Prerequisite
 >
@@ -48,9 +48,7 @@ As the number of projects you do increase, so will the number of conflicting sof
 
 Assuming you had downloaded and installed `conda`, you will create your first environment, `introductory_python`, in the command line (Terminal for Mac OSX users, Powershell for Windows users), as follows:
 
-{:.code}
-
-```
+```bash
 conda create -n introductory_python python=3.12
 ```
 
@@ -58,9 +56,7 @@ This will create a new `conda` environment called `introductory_python`. Importa
 
 Once you have created a new environment, we will activate the environment by doing the following:
 
-{:.code}
-
-```
+```bash
 conda activate introductory_python
 ```
 
@@ -75,11 +71,11 @@ We can deactivate the environment by doing `conda deactivate`. To get a list of 
 >
 > > ## Solution
 > >
-> > ```
+> > ```bash
 > > conda  create -n python_311 python=3.11
 > > ```
 
-{: .discussion}
+{:.discussion}
 
 > ## Environment for this workshop
 >
@@ -116,7 +112,7 @@ Thankfully, these situations are rare nowadays with the introduction of package 
 
 {:.code}
 
-```
+```bash
 conda install -c conda-forge jupyter
 ```
 
