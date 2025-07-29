@@ -102,7 +102,7 @@ An understanding of the HTTP standard is helpful if we want to work with **APIs*
 Instead of returning HTML for a human to read, APIs typically return structured data (commonly `JSON` or `XML`) that applications can process. For example, a weather app might send an HTTP GET request to an API endpoint like:
 
 ```bash
-https://api-open.data.gov.sg/v2/real-time/api/pm25
+https://api-open.data.gov.sg/v2/real-time/api/pm25?date=2025-01-01
 ```
 
 The API then responds with a `JSON` object containing data such as:
