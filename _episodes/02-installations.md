@@ -4,7 +4,6 @@ teaching: 20
 exercises: 20
 questions:
   - What is the dataset that we are working with?
-  - How do I write my first Python code in a Notebook?
   - Why do we need to use an environment manager such as conda?
 objectives:
   - Introduce the dataset used throughout the course.
