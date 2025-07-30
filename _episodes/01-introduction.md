@@ -28,7 +28,9 @@ At the same time, it poses challenges, including issues of privacy, misinformati
 
 # The request life-cycle
 
-Most of us associate the internet with a web browser like Chrome, Firefox, Safari — or even, God forbid, Internet Explorer. Yet what happens when you type `www.google.com` into the address bar is nothing short of an engineering marvel.
+Most of us associate the internet with a web browser like Chrome, Firefox, Safari — or even, God forbid, Internet Explorer. Yet what happens when you type `www.google.com` into the address bar is nothing short of an engineering marvel. The figure below shows how many things happen within the fraction of second once you hit `enter`.
+
+![Packet exchanges](figs/packet-exchange.jpeg)
 
 In reality, the internet does not understand human‑friendly names like `www.google.com`. Instead, every server on the internet is identified by an **IP address** — a unique series of numbers that acts like a digital street address. When you press `Enter`, your request first goes to the **Domain Name System (DNS)**, which translates the web address into the correct IP address. Your computer then uses that IP to locate Google’s servers, establishing a connection through a series of routers and networks in milliseconds.
 
