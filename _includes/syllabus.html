@@ -23,30 +23,14 @@ Days are displayed if at least one episode has 'start = true'. {% endcomment %}
       </td>
       <td class="col-md-7">Download files required for the lesson</td>
     </tr>
-    {% if site.instructor_training %}
-    <tr>
-      {% if multiday %}
-      <td class="col-md-1"></td>
-      {% endif %}
-      <td class="{% if multiday %}col-md-1{% else %}col-md-2{% endif %}"></td>
-      <td class="col-md-3">
-        <a
-          href="{{ site.instructor_pre_survey }}{{ site.github.project_title }}"
-          >Pre-training survey</a
-        >
-      </td>
-      <td class="col-md-7">
-        Please fill out our pre-training survey before the start of the course.
-      </td>
-    </tr>
-    {% endif %} {% for lesson_episode in lesson_episodes %} {% if
-    site.episode_order %} {% assign episode = site.episodes | where: "slug",
-    lesson_episode | first %} {% else %} {% assign episode = lesson_episode %}
-    {% endif %} {% if episode.start %} {% comment %} Starting a new day? {%
-    endcomment %} {% assign day = day | plus: 1 %} {% if day > 1 %} {% comment
-    %} If about to start day 2 or later, show finishing time for previous day {%
-    endcomment %} {% assign hours = current | divided_by: 60 %} {% assign
-    minutes = current | modulo: 60 %}
+    {% for lesson_episode in lesson_episodes %} {% if site.episode_order %} {%
+    assign episode = site.episodes | where: "slug", lesson_episode | first %} {%
+    else %} {% assign episode = lesson_episode %} {% endif %} {% if
+    episode.start %} {% comment %} Starting a new day? {% endcomment %} {%
+    assign day = day | plus: 1 %} {% if day > 1 %} {% comment %} If about to
+    start day 2 or later, show finishing time for previous day {% endcomment %}
+    {% assign hours = current | divided_by: 60 %} {% assign minutes = current |
+    modulo: 60 %}
     <tr>
       {% if multiday %}
       <td class="col-md-1"></td>
@@ -58,13 +42,16 @@ Days are displayed if at least one episode has 'start = true'. {% endcomment %}
       <td class="col-md-3">Finish</td>
       <td class="col-md-7"></td>
     </tr>
+
     {% endif %} {% assign current = site.start_time %} {% comment %}Re-set start
     time of this episode to general daily start time {% endcomment %} {% endif
     %} {% assign hours = current | divided_by: 60 %} {% assign minutes = current
     | modulo: 60 %}
     <tr>
       {% if multiday %}
-      <td class="col-md-1">{% if episode.start %}Day {{ day }}{% endif %}</td>
+      <td class="col-md-1">
+        {% if episode.start %}<b>Day {{ day }}</b>{% endif %}
+      </td>
       {% endif %}
       <td class="{% if multiday %}col-md-1{% else %}col-md-2{% endif %}">
         {% if hours < 10 %}0{% endif %}{{ hours }}:{% if minutes < 10 %}0{%
@@ -83,6 +70,7 @@ Days are displayed if at least one episode has 'start = true'. {% endcomment %}
         {% endunless %} {% endfor %} {% endif %} {% endif %}
       </td>
     </tr>
+
     {% assign current = current | plus: episode.teaching | plus:
     episode.exercises | plus: episode.break %} {% endfor %} {% assign hours =
     current | divided_by: 60 %} {% assign minutes = current | modulo: 60 %} {%

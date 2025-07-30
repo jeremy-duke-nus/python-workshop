@@ -22,7 +22,7 @@ These datasets cover a wide range of topics — from demographics and transport,
 
 For example, instead of downloading a CSV of daily weather records, an application can send an HTTP GET request to the data.gov.sg API and immediately receive the latest data in JSON format. This makes it possible to build real‑time dashboards, mobile apps, or data‑driven services that are always up to date.
 
-In the codes provided in the notebooks, we will be using `python` to extract 24-hour weather forecasts made available by NEA. The API URL that we will be using is the following: [https://api-open.data.gov.sg/v2/real-time/api/twenty-four-hr-forecast?date=2025-01-01](https://api-open.data.gov.sg/v2/real-time/api/twenty-four-hr-forecast?date=2025-01-01).
+In the codes provided in the notebooks, we will be using Python to extract 24-hour weather forecasts made available by NEA. The API URL that we will be using is the following: [https://api-open.data.gov.sg/v2/real-time/api/twenty-four-hr-forecast?date=2025-01-01](https://api-open.data.gov.sg/v2/real-time/api/twenty-four-hr-forecast?date=2025-01-01).
 
 # Setting up your VSCode for working with Jupyter notebooks
 
@@ -52,7 +52,7 @@ Assuming you had downloaded and installed `conda`, you will create your first en
 conda create -n introductory_python python=3.12
 ```
 
-This will create a new `conda` environment called `introductory_python`. Importantly, we had also told `conda` to download and install the python version 3.12 (`python=3.12`). The ability to specify exact versions is important for reproducibilty -- as software packages are updated, some of the internals might change and become incompatible with other software packages we are using. In some cases, functions are deprecated or their behaviours changed. For that reason, it always pays to be mindful of which software versions we are using in our work. We can create a file called `requirements.txt` which captures all the software packages and version numbers in our environment so that someone else can reproduce our work entirely.
+This will create a new `conda` environment called `introductory_python`. Importantly, we had also told `conda` to download and install the Python version 3.12 (`python=3.12`). The ability to specify exact versions is important for reproducibilty -- as software packages are updated, some of the internals might change and become incompatible with other software packages we are using. In some cases, functions are deprecated or their behaviours changed. For that reason, it always pays to be mindful of which software versions we are using in our work. We can create a file called `requirements.txt` which captures all the software packages and version numbers in our environment so that someone else can reproduce our work entirely.
 
 Once you have created a new environment, we will activate the environment by doing the following:
 
@@ -66,7 +66,7 @@ We can deactivate the environment by doing `conda deactivate`. To get a list of 
 
 > ## Creating a new enviroment
 >
-> In this simple exercise, create a new python environment called `python3_11` which will use python 3.11 instead. Verify that your new environment uses the correct version of Python by calling `python` from the environment.
+> In this simple exercise, create a new Python environment called `python3_11` which will use Python 3.11 instead. Verify that your new environment uses the correct version of Python by calling `python` from the environment.
 > {:.solution}
 >
 > > ## Solution

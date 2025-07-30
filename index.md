@@ -7,9 +7,9 @@ title: Introduction to Python Programming
 
 # Course overview
 
-This is the course website for Introductory Python, a workshop that is run by the SingHealth-Duke NUS Pathology Academic Clinical Program (Path ACP). This two day course aims to provide non-technical specialists with a basic understanding of the `Python` programming language.
+This is the course website for Introductory Python, a workshop that is run by the SingHealth-Duke NUS Pathology Academic Clinical Program (Path ACP). This two day course aims to provide non-technical specialists with a basic understanding of the Python programming language.
 
-To motivate the use of `python`, we will be working with publicly available APIs. Since this course does not assume technical knowledge, a brief primer on how information is exchanged over the internet will be provided at the start of the course.
+To motivate the use of Python, we will be working with publicly available APIs. Since this course does not assume technical knowledge, a brief primer on how information is exchanged over the internet will be provided at the start of the course.
 
 {:.callout}
 
