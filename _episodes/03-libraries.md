@@ -16,18 +16,11 @@ keypoints:
 
 # Learning outcomes
 
-In this section, we will do the following:
-
-1. Load the `requests` library
-2. Fetch the data from the API endpoint using the `requests` library.
-3. Understand how to interact with the response from the API.
-
 By the end of this section, you should be familiar with the following:
 
-1. Understand how to load libraries, and best practices on how to do so.
-2. Creating new variables to hold information in Python.
-3. Make use of `f-strings` to format strings in Python.
-4. Fetch data from an API using `requests` and interacting with response from API.
+1. Recognize why we use libraries in programming
+2. Understand how to load libraries, and best practices on how to do so.
+3. Be familiar with namespaces.
 
 # Working with libraries
 
@@ -136,4 +129,4 @@ This is similar to the **standard import**; however, this allows us to shorten t
 
 # Conclusion
 
-In this section, we have introduced how libraries can be used to extend the functionality of Python. In the next section, we will be performing our first API query to fetch data. This will also be your first encounter with some core data types in Python. The next section will be an extremely important section for your Python journey!
+In this section, we have introduced how libraries can be used to extend the functionality of Python. In the next few sections, we will be performing our first API query to fetch data. This will also be your first encounter with some core data types in Python. The next sections will be an extremely important section for your Python journey!
