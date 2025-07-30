@@ -7,6 +7,6 @@ objectives: []
 keypoints: []
 ---
 
-# Break
+# Take a 10-minute break! ☕️
 
-☕ Take a short break — stretch, grab a drink, and relax!
+We’ll resume shortly.
