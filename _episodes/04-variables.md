@@ -214,3 +214,7 @@ Think of `del` as hitting the “reset” button on variables you no longer need
 > # Errors in Python
 >
 > Errors are raised when you are asking Python to do something it cannot. There are numerous base errors, including `NameError` which we just saw. This error is raised when you tell Python to use a variable that does not exist. We will be diving more into how we can handle errors in Python in the second day.
+
+# Conclusion
+
+In this section, we have covered variables, a core component of any programming language. Armed with the knowledge of what are variables, we will next look at what type of data can we store as variables.

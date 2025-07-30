@@ -1,6 +1,6 @@
 ---
 title: Information exchange on the internet
-teaching: 20
+teaching: 25
 exercises: 0
 questions:
   - What exactly is the internet?
@@ -13,6 +13,7 @@ keypoints:
   - Various transport protocols, such as HTTP, dictate how information is transferred between servers.
   - Data is returned in various formats by servers, including `json` and `xml`.
   - APIs are exposed interfaces which allows us to programatically get data from the server.
+start: true
 ---
 
 # The internet revolution
