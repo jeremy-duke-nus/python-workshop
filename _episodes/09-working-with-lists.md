@@ -214,6 +214,31 @@ Finally, we can specify **step sizes** as follows:
 animals[::2] # ['cat', 'rabbit', 'hamster']
 ```
 
-Combining these characteristics together, how can we reverse a list?
+{:.challenge}
+
+> ## Reversing a list
+>
+> Combining these characteristics together, how can we reverse a list?
 
 # Sorting a collection
+
+Now that you know how to subset a list, how about sorting it? In Python, there are two methods which can be used to perform sorting, as shown below:
+
+```python
+unsorted_list = [3,2,5,1,8,7,3,5]
+
+unsorted_list2 = unsorted_list[:]
+
+# In-place sorting
+unsorted_list.sort()
+
+sorted(unsorted_list)
+```
+
+The difference between in-place sorting (done by doing `.sort()`) will edit the data in-memory. This does away with the need for us to assign a new variable to the sorted list. On the other hand, using the `sorted` function will create a new copy of the data in memory; hence, we will need to perform a variable assignment.
+
+> ## Try it
+>
+> What happens when you try to assign `unsorted_list.sort()` to a variable? What is the value contained in the variable?
+
+# Conclusion
