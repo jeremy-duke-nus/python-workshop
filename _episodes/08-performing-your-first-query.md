@@ -174,7 +174,7 @@ In Python, we do the same thing: we store information as pairs of keys and value
 Now that we know what a dictionary is, we will create a new one:
 
 ```python
-my_first_dictionary = {"name": "jeremy", "institution": "sgh", "number_of_pets": 1}
+staff_information = {"name": "jeremy", "institution": "sgh", "number_of_pets": 1}
 ```
 
 Notice a few features in our new dictionary:
@@ -185,8 +185,8 @@ Notice a few features in our new dictionary:
 Once a dictionary is created, we can update it by adding new key-value combinations, or replace existing values for a key as follows:
 
 ```python
-my_first_dictionary['name'] = 'jeremy ng'             # Update the value held in name
-my_first_dictionary['nationality'] = 'singaporean'    # Add a new key-value to the dictionary
+staff_information['name'] = 'jeremy ng'             # Update the value held in name
+staff_information['nationality'] = 'singaporean'    # Add a new key-value to the dictionary
 ```
 
 {: .challenge}
@@ -197,7 +197,7 @@ my_first_dictionary['nationality'] = 'singaporean'    # Add a new key-value to t
 >
 > ```python
 > # TODO: Fill in the blanks
-> my_first_dictionary['name'] = 'jeremy ng'._____    # Capitalize the name
+> staff_information['name'] = 'jeremy ng'._____    # Capitalize the name
 >
 > # TODO: Create a new dictionary with pet information. The name of my pet is george, and he is a 5 year old poochon.
 > pet_information = {____:_____, _____:_____, ____:____}
@@ -211,6 +211,92 @@ my_first_dictionary['nationality'] = 'singaporean'    # Add a new key-value to t
 > ![George the Pooch](figs/george_the_pooch.tif)
 
 # Accessing information from the dictionary
+
+## Examining the contents of the dictionary
+
+Just like how we refer to a table of contents to find if a book contains a specific topic of our interest, we can also get a list of all the keys within a dictionary using the following:
+
+```python
+staff_information.keys()
+```
+
+Similarly, the `.values()` method will return all the values contained in a dictionary. If we want to get all the key-value pairs, we can do so as follows:
+
+```python
+staff_information.items()
+```
+
+You will probably have noticed when we were working with dictionaries that we have used `[<key>]` to retrieve specific keys. What happens when you try to retrieve a key that does not exist in the dictionary?
+
+{:.challenge}
+
+> ## Try it
+>
+> Try to retrieve a non-existent key in your dictionary. What do you get?
+
+Normally, a program will terminate once it encounters an error since Python assumes someone did something wrong. However, what if it was by design? For instance, in the above case, someone who does not have a pet should not have a `pet_information` key in the dictionary (Just because you don't own a pet does not mean you cannot be a staff at SGH!). While APIs generally try to standardize a response (including the keys contained within the response), there are situations where a key is omitted by design. Because this is something that is anticipated, Python provides another way to access data from a dictionary.
+
+```python
+staff_information.get('pet_information')
+```
+
+{:.challenge}
+
+> ## Try it
+>
+> Similar to the exercise above, try to access a non-existent key in your dictionary. What do you get this time?
+
+Unlike the `[]` method of retrieval which will return an error, `get` will return you a value (in this case, `None`). Under the hood, what `get` does is the following:
+
+1. Perform a look up using `[]`.
+2. If the key does not exist, return a default value. If not, return the value associated with that key.
+
+We are able to change the default value returned to us by `get` as follows:
+
+```python
+staff_information.get("department", "pathology")
+```
+
+# Practice time!
+
+So far, we have covered how to create a dictionary and how to retrieve values from a dictionary with a provided key. In the next few minutes, try the following exercises:
+
+```python
+# TODO: Fill in the blanks
+
+# Generate the URL for API query
+DATE = "2025-01-01"
+BASE_URL = "https://api-open.data.gov.sg/v2/real-time/api/rainfall"
+URL = _"{}?date={}"
+
+# Get the response from API and obtain the data as a JSON
+response = requests.______(URL)
+rainfall = response.________
+
+# Get the keys within the JSON.
+rainfall.____
+
+# Get the measurements. The measurements are stored in the key "data"
+measurements = rainfall____
+
+# Get the unit of measurement
+measurement_unit = _________________
+
+# Get the measurement type
+measurement_description = ________________
+```
+
+{:.challenge}
+
+> ## Try it!
+>
+> Try to explore the JSON structure and data from the API we started off with ()
+>
+> ```python
+> URL = "https://api-open.data.gov.sg/v2/real-time/api/twenty-four-hr-forecast?date=2025-01-01"
+> ```
+>
+> Try to find out what are the keys and values contained within the JSON response.
 
 # Conclusion
 
