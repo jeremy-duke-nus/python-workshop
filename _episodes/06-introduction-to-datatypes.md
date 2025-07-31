@@ -220,6 +220,18 @@ While it works, this is messy and simply not scalable. This also makes our code 
 >
 > Try to also perform the same using format and `%`. The exercise notebook also provides some other worked exercises for you to practice string formatting. Go through these exercises in the next few minutes.
 
+# Other common string methods
+
+While we have talked extensively about string formatting, this is not the only method that is available for strings. Some other common methods are listed below:
+
+```python
+url.split("/")                     # splits a string into parts based on the separator provided
+url.replace("https", "http")       # replaces all instances of a substring with a new substring
+len(url)                           # counts how many characters are there in a string
+```
+
+We will revisit the `split` method again later on. Most of the rest are quite self-explanatory and is left as an exercise to the reader when they need to use these methods.
+
 # Conclusion
 
 Up to this point, we have been introduced to some basic concepts in Python. We have also discussed strings, and generated the URL of an API endpoint which we will be querying later. After lunch, we will perform our first API query.
