@@ -208,7 +208,7 @@ staff_information['nationality'] = 'singaporean'    # Add a new key-value to the
 > ```
 >
 > Here's a pic of George the Pooch, just to brighten everyone's afternoon.
-> ![George the Pooch](figs/george_the_pooch.tif)
+> ![George the Pooch](figs/george_the_pooch.png)
 
 # Accessing information from the dictionary
 
