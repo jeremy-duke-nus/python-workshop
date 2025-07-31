@@ -290,7 +290,7 @@ measurement_description = ________________
 
 > ## Try it!
 >
-> Try to explore the JSON structure and data from the API we started off with ()
+> Try to explore the JSON structure and data from the API we started off with.
 >
 > ```python
 > URL = "https://api-open.data.gov.sg/v2/real-time/api/twenty-four-hr-forecast?date=2025-01-01"
