@@ -173,6 +173,45 @@ In Python, we do the same thing: we store information as pairs of keys and value
 
 Now that we know what a dictionary is, we will create a new one:
 
+```python
+my_first_dictionary = {"name": "jeremy", "institution": "sgh", "number_of_pets": 1}
+```
+
+Notice a few features in our new dictionary:
+
+1. We use a `:` to separate the key (left-hand size) and value (right-hand size). This is the **key-value** pair talked about
+2. We can mix data types in our dictionary. For instance, my name and institution are both strings, while the number of pets I have is a number
+
+Once a dictionary is created, we can update it by adding new key-value combinations, or replace existing values for a key as follows:
+
+```python
+my_first_dictionary['name'] = 'jeremy ng'             # Update the value held in name
+my_first_dictionary['nationality'] = 'singaporean'    # Add a new key-value to the dictionary
+```
+
+{: .challenge}
+
+> ## Try it
+>
+> Try to update the dictionary in the snippet below:
+>
+> ```python
+> # TODO: Fill in the blanks
+> my_first_dictionary['name'] = 'jeremy ng'._____    # Capitalize the name
+>
+> # TODO: Create a new dictionary with pet information. The name of my pet is george, and he is a 5 year old poochon.
+> pet_information = {____:_____, _____:_____, ____:____}
+>
+> # TODO: Add my pet information to the dictionary
+> _____['pet_information'] = ________
+>
+> ```
+>
+> Here's a pic of George the Pooch, just to brighten everyone's afternoon.
+> ![George the Pooch](figs/george_the_pooch.tif)
+
+# Accessing information from the dictionary
+
 # Conclusion
 
 Congrats on finishing this exercise! 🎉 This is one small step into the world of working with APIs, but a big huge step for you in your programming journey. With your new skills in sending requests, checking responses, and handling data, you’re ready to unlock tons of powerful tools and information online 🚀. But how can we begin to manipulate the data fetched back from the API?
