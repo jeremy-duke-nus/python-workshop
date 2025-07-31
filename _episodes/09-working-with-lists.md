@@ -16,6 +16,56 @@ keypoints:
 
 # Learning outcomes
 
+By the end of this section, we should be:
+
+1. Familar with lists and tuples,
+2. Be able to slice, subset and edit lists.
+
+# Most data are collections of values
+
+So far, we’ve been looking at data that comes as a dictionary — like a phone book where each label (or key) points to one piece of information.
+
+But what if a label points to more than one thing? For example, imagine asking an API for a list of all the tasks a user has. Instead of giving you just one task, it sends back a list of tasks. In Python, we call this a list — it’s like a shopping list, a to‑do list, or a playlist: an ordered collection of items. You can look at the first item, the second, the third, and so on.
+
+Returning to your example API call before, lets take a look at the records that are contained in this response
+
+```python
+URL = "https://api-open.data.gov.sg/v2/real-time/api/twenty-four-hr-forecast?date=2025-01-01"
+
+response = requests.get(URL)
+forecast = response.json()
+
+# To get the data, contained in the data key
+data = forecast['data']
+print (data.keys())
+
+# Records, which are found in the records key.
+records = data['records']
+print (records)
+```
+
+There are in fact 6 different measurements that were taken. We can confirm this by finding the length of a list. This is done as follows:
+
+```python
+len(records)
+```
+
+A list in Python is defined as anything that has a length of zero or more. Let's dive a bit more into lists in Python, including how to create them and later, how do we work with them.
+
+# An empty list is still a list
+
+Just like how an empty notebook is still a notebook, we can always create an empty list by doing the following:
+
+```python
+empty_list = []
+```
+
+{:.challenge}
+
+> ## Methods in lists
+>
+> Try to get the list of methods and attributes that are available for working with lists first.
+
 # Surprise, surprise!
 
 Here's an interesting exercise. Let's create a list `list1`, and we create a second list that is the same as `list1` as `list2`, as follows:
