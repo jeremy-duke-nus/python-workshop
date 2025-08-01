@@ -268,6 +268,7 @@ So far, we have covered how to create a dictionary and how to retrieve values fr
 DATE = "2025-01-01"
 BASE_URL = "https://api-open.data.gov.sg/v2/real-time/api/rainfall"
 URL = _"{}?date={}"
+print (URL)
 
 # Get the response from API and obtain the data as a JSON
 response = requests.______(URL)
@@ -281,9 +282,11 @@ measurements = rainfall____
 
 # Get the unit of measurement
 measurement_unit = _________________
+print (measurement_unit)
 
 # Get the measurement type
 measurement_description = ________________
+print (measurement_description)
 ```
 
 {:.challenge}

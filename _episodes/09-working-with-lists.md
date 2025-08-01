@@ -6,10 +6,9 @@ questions:
   - What are some common data types used to store collections of items?
   - How can we manipulate the data in these collections?
 objectives:
-  - Understand the differences between a list and a tuple.
+  - Understand the differences between a list.
   - Be able to create, update and subset a list.
 keypoints:
-  - While both lists and tuples are used to store collections, they differ in mutability.
   - We can use slicing to subset values within a collection.
   - Unpacking allows us to assign multiple elements to multiple variables simultaneously.
 ---
@@ -18,8 +17,9 @@ keypoints:
 
 By the end of this section, we should be:
 
-1. Familar with lists and tuples,
-2. Be able to slice, subset and edit lists.
+1. Familar with lists,
+2. Able to slice, subset and edit lists.
+3. Appreciative of how lazy we can get with Python
 
 # Most data are collections of values
 
@@ -237,8 +237,115 @@ sorted(unsorted_list)
 
 The difference between in-place sorting (done by doing `.sort()`) will edit the data in-memory. This does away with the need for us to assign a new variable to the sorted list. On the other hand, using the `sorted` function will create a new copy of the data in memory; hence, we will need to perform a variable assignment.
 
+{:.challenge}
+
 > ## Try it
 >
 > What happens when you try to assign `unsorted_list.sort()` to a variable? What is the value contained in the variable?
 
+# Laziness is the order of the day
+
+So far, we have talked about how to assign values to a single variable. Lets say we have a list containing `x`,`y`,`z` coordinates as follows:
+
+```python
+coordinates = [1.0, -0.5, 2, 'test_coordinates']
+x = coordinates[0]
+y = coordinates[1]
+z = coordinates[2]
+```
+
+The above will work; however, it is clunky and repetitive. At the same time, a good programmer is also a lazy programmer and the less we type, the better! Thankfully, in keeping with the ethos of laziness, Python provides a much faster way for us to do this! This is called **unpacking**. The example below highlights how it is done.
+
+```python
+coordinates = [1.0, -0.5, 2]
+x,y,z = coordinates
+```
+
+✅ In one stroke, we avoided three separate lines of code.
+That’s cleaner, easier to read, and we saved about 30 keystrokes 😁.
+
+{:.callout}
+
+> ## Unpacking a list using `*`
+>
+> This is a new functionality only available in the newer versions of Python 3. Imagine the following situation:
+>
+> ```python
+> coordinates = [1.0, -0.5, 2, 'japan', 'tokyo', 'december']
+> ```
+>
+> Lets say we want to extract the coordinates into 3 variables (x,y and z), the country into a list, and the month as a new variable. Here's one way to do it:
+>
+> ```python
+> x,y,z = coordinates[0:3]
+> country = coordinates[3:5]
+> month = coordinates[5]
+> ```
+>
+> While this is already more concise than trying to assign each individually, it is still a bit long. We can simplify this even more, as follows:
+>
+> ```python
+> x,y,z,*country,month = coordinates
+> ```
+>
+> Here, `*` simply tells Python to capture everything else that was not assigned to its own variable. Note that you can only do `*` unpacking in a single line. This is because under the hood, Python is basically saying "I will assign the first three to x,y,z, and the last to month. Everything else will be assigned to country." You can imagine why you cannot have more than one `*` capture - Python simply does not know how to assign what are the "leftovers"
+
+{:.challenge}
+
+> ## ValueError
+>
+> A common error you might run into is the `ValueError`, which happens when we try to do the following:
+>
+> ```python
+> x,y = coordinates
+> ```
+>
+> This is because the list `coordinates` has more than two values, and Python does not know how to assign the remaining values. To fix this, we can use `*` unpacking as described above. If we only need the first two values and nothing else, we can do it as follows:
+>
+> ```python
+> x,y,*_ = coordinates
+> ```
+>
+> `_` is often used in Python to indicate something that will not be referred to in any other parts of the script.
+
+# Hands-on exercises
+
+In the next few minutes, try the following exercises. We will be on hand to help if you are stuck.
+
+```python
+# TODO: Fill in the blanks
+
+animals = ["cat", "dog", "rabbit", "parrot", "hamster"]
+
+# Sort the list of animals alphabetically out-of-memory
+sorted_animals = _______(animals)
+print (sorted_animals)
+# Output: ['cat', 'dog', 'hamster', 'parrot', 'rabbit']
+
+# Assign parrot to a new variable
+bird = animals[_]
+
+# Assign the first two animals as a new variable
+common_pets = animals[____]
+# Output: ['cat', 'dog']
+
+# Assign the first two animals to a single variable (common_pets), and all
+# others into individual variables
+__, rabbit, parrot, hamster = animals
+print (common_pets)
+
+#Output: ['cat', 'dog']
+```
+
 # Conclusion
+
+We started with the idea that most data aren’t just single values, but collections. In this section, you learned that:
+
+1. Lists let us store and organize ordered collections of items.
+2. We can slice and index lists to get exactly what we want, whether from the start, the end, or with custom steps.
+3. Python’s zero‑based, open‑range system might feel odd at first, but it’s incredibly consistent once you get used to it.
+4. And finally, with unpacking, we saw how Python rewards “lazy programmers” by letting us write less code that’s cleaner and easier to read.
+
+At this point, you should be comfortable creating, editing, slicing, sorting, and unpacking lists — all powerful tools for working with real‑world data.
+
+➡️ Up next, we’ll see how we can work with numeric data types - and in particular, the all important dates and times.
