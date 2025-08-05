@@ -57,6 +57,40 @@ While mathematical comparisons (`>`, `<`, `<=`, `>=`) can only used used for num
 > dictionary1 __ dictionary2         # True
 > ```
 
+# Membership tests
+
+Another class of comparison is that of membership testing. For instance, lets say we have a list of fruits as such:
+
+```python
+fruits = ['apple', 'orange', 'banana', 'kiwi']
+```
+
+It is a relatively common task to ask if a specific value is in the list (or a string, for that matter). We can quicky do this using the `in` operator. Likewise, negation can be done by adding the `not` operator. For instance:
+
+```python
+fruits = ['apple', 'orange', 'banana', 'kiwi']
+"apple" in fruits         # True
+"pineapple" in fruits     # False
+
+"pineapple" not in fruits # True
+
+"apple" in "pineapple"    # True
+"pineapple" in apple      # False
+```
+
+Note that in test of membership, casings matter. For instance,
+
+```python
+"apple" in "pineapple" # True
+"apple" in "pineApple" # False
+```
+
+{:.challenge}
+
+> ## How do I do this?
+>
+> We have seen how `"apple" in "pineapple"` is `True`, but`"apple" in "pineApple"` is `False`. This is by design. However, what can you do if you want to `"apple" in "pineApple"` to also be `True`?
+
 # 🟢 True or False?
 
 When we do a comparison in Python, we will get either `True` or `False` in Python. These special values are called `boolean` types. While `True` and `False` can refer to whether a comparison is true or otherwise, Python takes this further with a concept called **truthiness**. This refers to how certain special values are also considered `True` or `False`. Specifically, empty lists, empty tuples, empty dictionaries and zero will evaluate to False.
