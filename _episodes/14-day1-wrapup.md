@@ -37,13 +37,16 @@ You’ve learned:
 > ### Your Task
 >
 > Write a program that:
-> Prints the city and temperature, rounding the temperature to 1 decimal place.
-> Suggests an activity based on the forecast:
-> "sunny" → "Great day for the beach!"
-> "rainy" → "Stay indoors with a good book."
-> "cloudy" → "Perfect time for a walk in the park."
-> Anything else → "Just go shopping!"
-> Stretch Goal 🌱
+>
+> 1. Prints the city and temperature, rounding the temperature to 1 decimal place.
+> 2. Suggests an activity based on the forecast:
+>    - "sunny" → "Great day for the beach!"
+>    - "rainy" → "Stay indoors with a good book."
+>    - "cloudy" → "Perfect time for a walk in the park."
+>    - Anything else → "Just go shopping!"
+>
+> ### Stretch Goal 🌱
+>
 > Add a check: if the temperature is above 35°C, regardless of forecast, print:
 > "It’s too hot! Stay hydrated."
 

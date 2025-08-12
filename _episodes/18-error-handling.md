@@ -1,7 +1,7 @@
 ---
 title: Managing user and code failures
-teaching: 40
-exercises: 30
+teaching: 30
+exercises: 20
 questions:
   - How are errors handled in Python?
   - What are some common coding practices to handle errors in programming?
