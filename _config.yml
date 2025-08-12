@@ -24,7 +24,7 @@ title: "Introduction to Python: working with APIs"
 # 'transition-step-2': notice encouraging to use new version
 # 'transition-step-3': notice indicating the lesson is deprecated,
 #                      with automated redirect
-life_cycle: "alpha"
+life_cycle: "beta"
 
 # For lessons in the life stages in 'transition-step-1' or later:
 # - 'transition_url' holds the URL for the version of the lesson that

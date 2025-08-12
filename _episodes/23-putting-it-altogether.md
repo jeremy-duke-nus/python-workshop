@@ -1,5 +1,5 @@
 ---
-title: Putting it altogther
+title: Putting it altogether
 teaching: 10
 exercises: 60
 questions:

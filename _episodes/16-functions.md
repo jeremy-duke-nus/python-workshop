@@ -171,6 +171,64 @@ In mathematics, we have composite functions (which are really just functions whi
 > print (calculator(1,3,'-')) # Output: 4
 > ```
 
-# The order in which you return makes a difference
+# Using return to terminate code evaluation
+
+The `return` keyword signals to Python that it should not continue evaluating any other codes following it. Consequently, we can structure our codes to take advantage of this property to improve code performance. This is known as an early return. Consider the codes below:
+
+```python
+def classify_score(score:int) -> str:
+  if score < 50:
+    grade = "U"
+  elif core < 55:
+    grade = "E"
+  elif score < 60:
+    grade = "D"
+  elif score < 65:
+    grade = "C"
+  elif score < 70:
+    grade = "B"
+  else:
+    grade = "A"
+  return grade
+```
+
+Looking at the code block above, it is apparent that we do not actually really need the `grade` variable for any other purposes other than to return. We can instead write this:
+
+```python
+def classify_score(score:int) -> str:
+  if score < 50:
+    return "U"
+  elif score < 55:
+    return "E"
+  elif score < 60:
+    return "D"
+  elif score < 65:
+    return "C"
+  elif score < 70:
+    return "B"
+  return "A"
+```
+
+While trivial, the code above is much clearer in intent, and also significantly less repetitive. Also, we did not need to define the default case, since the only time our code should ever reach the last return is if it fails to meet any other criteria (and hence, never returns a value).
+
+# Putting it together
+
+Now its time for you to put into practice what you have learned above. Try to write your own function to calculate the BMI of a person, and also how much weight they need to gain or loss in order to be in the healthy weight range (if they aren't already so).
+
+{:.challenge}
+
+> ## Writing your BMI calculator
+>
+> ```python
+> # TODO: Implement the following functions
+> # 1. BMI calculator (calculate_bmi). Inputs: weight (in KG), height (in M). BMI = weight/(height **2)
+> # 2. Get healthy weight range (calculate_weight_range). Inputs: weight (in KG), height (in M).
+> #.   Healthy range: 18.5 to  22.9.
+> #.   This function should return you the minimum and maximum weight of the healthy range.
+> # 3. Provide recommendation for weight gain/loss (recommend_delta). Inputs: minimum weight, maximum weight, present weight. Should return "You need to lose X kg" or "You need to gain X kg"
+>
+> ```
 
 # Conclusion
+
+Functions are the foundation of all programs. They allow us to perform a set sequence of actions on our input in a consistent and predictable manner. In this way, computers are excellent at following instructions - they do not try to guess what you are doing. In the next section, we will look at how Python will partake in Singaporean's favorite sport: complain. This is an important element of designing robust programs.
