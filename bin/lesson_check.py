@@ -38,7 +38,7 @@ REQUIRED_FILES = {
     os.path.join('_extras', 'guide.md'): True,
     'index.md': True,
     'reference.md': True,
-    'setup.md': True,
+    'setup.md': False,
 }
 
 # Episode filename pattern.

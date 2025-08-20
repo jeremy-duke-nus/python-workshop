@@ -12,8 +12,4 @@ keypoints:
 
 # Task Description
 
-In this section, you will be given 2 API URLs to work with. There are different tasks for each URL; take your time to work through these exercises to apply what you have learned over the last 2 days.
-
-# Task 1
-
-# Task 2
+In this section, you will be given 2 API URLs to work with. There are different tasks for each URL; take your time to work through these exercises to apply what you have learned over the last 2 days. We will be using data from the [data.gov.sg](data.gov.sg), which is an open data portal provided by the Singapore government. In it, you can download data from a wide-range of categories such as education, housing and health. Since we are in the healthcare sector, lets start with looking at matters that could impact health.

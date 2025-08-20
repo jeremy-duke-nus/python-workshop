@@ -14,3 +14,21 @@ keypoints:
   - Learn the concepts, then the syntax.
   - Generative AI can help improve programming efficiency, but it is not a substitute for being a proficient programmer.
 ---
+
+# 🎓 Wrapping Up the Workshop
+
+Congratulations on making it to the end of this two-day workshop! 🚀 Over the last sessions, we’ve covered a lot of ground:
+
+1. How data moves across the internet, and how to fetch information from an API.
+2. How to handle different data types (numbers, strings, dates) and use conditional logic.
+3. How to write functions, use loops, and handle errors gracefully.
+4. And finally, how to read and write files, giving your programs a way to save and load information.
+
+If there’s one thing to take away, it’s this: **Python is not an intimidating language**. At its core, it’s just about breaking problems into small steps and expressing them in code.
+
+# 🌱 What’s Next?
+
+Your Python journey doesn’t end here. In fact, this is just the start! Here are some key ideas to keep in mind:
+🧩 Tap into the ecosystem → Python has a library for almost anything: data analysis (`pandas`), machine learning (`scikit-learn`), web development (`Flask`, `Django`), automation (`requests`, `BeautifulSoup`), and more. With the rise of Generative AI 🤖 , you can quickly build prototypes and write codes. The task of a programmer/developer is increasingly shifting from writing codes to mapping requirements to codes, debugging and validating codes.
+
+👩‍💻👨‍💻 So go forth into the brave new world of Python programming — you’ve taken your first big step!
