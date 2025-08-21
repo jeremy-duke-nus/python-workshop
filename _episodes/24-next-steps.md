@@ -32,3 +32,7 @@ Your Python journey doesn’t end here. In fact, this is just the start! Here ar
 🧩 Tap into the ecosystem → Python has a library for almost anything: data analysis (`pandas`), machine learning (`scikit-learn`), web development (`Flask`, `Django`), automation (`requests`, `BeautifulSoup`), and more. With the rise of Generative AI 🤖 , you can quickly build prototypes and write codes. The task of a programmer/developer is increasingly shifting from writing codes to mapping requirements to codes, debugging and validating codes.
 
 👩‍💻👨‍💻 So go forth into the brave new world of Python programming — you’ve taken your first big step!
+
+# Post Course Survey
+
+Please provide your feedback at this [link](https://forms.gle/U4g7oPg7XBwxkPb59). Your feedback will allow us to refine our course materials while designing better and more relevant courses that can cater to your learning needs!
