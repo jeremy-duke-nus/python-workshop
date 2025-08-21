@@ -39,26 +39,48 @@ Before we dive in to the contents for today, lets get everyone warmed up as we t
 
 ## 1️⃣ Fetching and Reading API Data
 
-Use the Open-Meteo API to get the current temperature for your city.
-Print the temperature in a friendly sentence, e.g.,
-"The current temperature in London is 22°C."
-Hint: You’ll need the `requests` library.
+Use this API to suggest a random activity:
+`https://bored-api.appbrewery.com/random`
+
+Print the suggested activity in a easy to read sentence such as the following:
+
+```python
+"The suggested activity is Organize your pantry".
+```
+
+{:.callout}
+
+> ## Hints
+>
+> 1.  You’ll need the `requests` library.
+> 2.  You will need to retrieve the activity from the JSON
+> 3.  The key containing the activity is `activity`
 
 ## 2️⃣ Working with Data Types
 
 Create variables for:
-Your first name (string)
-Your age (integer)
-Today’s date (string in YYYY-MM-DD format)
-Print each variable along with its data type (use type()).
+
+1. Your first name (string)
+2. Your age (integer)
+3. Today’s date and the current time in the YYYY-MM-DD, HH:mm format
+
+{:.callout}
+
+> ## Hints:
+>
+> - You can use the `datetime` module to get the current date and time
 
 ## 3️⃣ Conditional Logic
 
 Write a program that checks if today’s temperature (from exercise 1) is:
-Above 25°C → print "It's a hot day!"
-Between 15°C and 25°C → print "It's a pleasant day."
-Below 15°C → print "Brrr, it's chilly."
 
-## 4️⃣ Bonus Challenge
+1. Above 25°C → print "It's a hot day!"
+2. Between 15°C and 25°C → print "It's a pleasant day."
+3. Below 15°C → print "Brrr, it's chilly."
 
-Use an API of your choice (e.g., PokéAPI, The Cat API, SpaceX API) to fetch some data, and print one fun fact about it.
+{:.callout}
+
+> ## Hints:
+>
+> Consider carefully what is the sequence in which we will want to perform this operation.
+> Use the `if`, `elif` keywords

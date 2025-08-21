@@ -14,9 +14,13 @@ math: true
 
 # Introduction
 
-Welcome Back! Let’s Get Looping 🔄
+Imagine you need to print whether a value is even or odd, and do this for all values between one and a million.
+One way might be to write a code line this:
 
-Now that everyone’s fueled up, it’s time to dive into one of the most exciting parts of programming: loops!
+![Repetition](./figs/exporting_many_lines.jpg)
+
+Clearly, this will not be the way to go! Here's where a loop 🔄 comes in handy.
+
 Loops let us automate repetition — instead of writing the same code again and again, we teach Python to do it for us. Whether you want to process a list of emails, count from 1 to 100, or keep checking for new data until a condition is met, loops are the tool you’ll reach for.
 
 Think of loops like giving instructions to a helpful robot:
