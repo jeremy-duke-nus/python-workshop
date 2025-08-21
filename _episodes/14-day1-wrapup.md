@@ -52,4 +52,6 @@ You’ve learned:
 
 # Looking ahead
 
-And that’s a wrap for Day 1! 🎉 Today you took your very first steps into Python — from learning how the internet shares information, to pulling data through an API, to making your code think with comparisons and decisions. That’s a lot to be proud of! Tomorrow we’ll take things up a notch: you’ll start writing your own reusable code with functions, learn how to handle errors without breaking a sweat, and even make your programs run repetitive tasks with minimal effort. By the end of Day 2, you’ll be putting all the pieces together into a script you can truly call your own. Get some rest — tomorrow we level up! 🚀
+And that’s a wrap for Day 1! 🎉 Today you took your very first steps into Python — from learning how the internet shares information, to pulling data through an API, to making your code think with comparisons and decisions. That’s a lot to be proud of! Please provide your feedback at this [site](https://forms.gle/wZ1Hh4oRGyfMxcAQ7) so that we can adjust the session tomorrow to cater to your learning needs.
+
+Tomorrow we’ll take things up a notch: you’ll start writing your own reusable code with functions, learn how to handle errors without breaking a sweat, and even make your programs run repetitive tasks with minimal effort. By the end of Day 2, you’ll be putting all the pieces together into a script you can truly call your own. Get some rest — tomorrow we level up! 🚀
